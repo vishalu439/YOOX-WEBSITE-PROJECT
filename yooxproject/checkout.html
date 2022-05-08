@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Out</title>
+    <style>
+
+        #container{
+            height: 550px;
+            width: 400px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            text-align: center;
+            background-color: greenyellow;
+            margin: auto;
+            border-radius: 20px;
+        
+        }
+        #form>input{
+            height: 24px;
+            width: 55%;
+            background-color:orange; 
+            font-size: 20px;
+          
+        }
+        #row1{
+            margin-top:20px;
+        }
+        #submit{
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px 30px ;
+            border-radius: 10px;
+            background-color: aquamarine;
+            cursor: pointer;
+        }
+        #submit:hover{
+            background-color: yellow;
+        }
+    
+        
+        </style>
+</head>
+<body>
+    
+
+
+<div id="container">
+  
+<form id="form">
+   <h1>Please fill the details...</h1>
+    <h3>Name</h3>
+    <input type="text" placeholder="Name">
+    <h3>Email</h3>
+    <input type="email" placeholder="Write Your Email">
+    <h3>Number</h3>
+    <input type="number" placeholder="Enter Your Number">
+    <h3>Address</h3>
+    <input id="address" type="text" placeholder="Enter Your Address">
+   
+  
+</form> 
+<div id="row1">
+   <button id="submit">Proced To Pay</button>
+</div>     
+</div>
+
+
+
+
+    
+</body>
+</html>
+
+<script>
+document.querySelector("#submit").addEventListener("click",myFunction)
+
+
+function myFunction(){
+    
+   
+    window.location.href="payment.html"
+   
+}
+
+
+
+</script>
