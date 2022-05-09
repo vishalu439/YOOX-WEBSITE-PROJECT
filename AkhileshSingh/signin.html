@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Page</title>
+    <style>
+    *{
+        margin: 0px;
+        padding:0px
+
+
+
+
+    }
+    form{
+           width:50%;
+           margin:auto;
+
+
+
+    }
+    input{
+        display:block;
+        margin:auto;
+        font-size:20px ;
+
+
+
+
+
+
+    }
+
+    .abc{
+    height: 200px;
+    width: 50%;
+   
+    margin: auto;
+    margin-top: 150px;
+    }
+
+h2{
+text-align: center;
+font-size: 40px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+box-shadow: 3px 3px red, -1em 0 .4em olive;
+}
+
+#email{
+margin-top: 30px;
+background-color: burlywood;
+color: aliceblue;
+}
+
+#password{
+margin-top: 20px;
+background-color: burlywood;
+margin-bottom: 15px;
+}
+
+
+</style>
+
+</head>
+<body>
+<h2>It’s great to see you again.</h2>
+ <div class="abc">
+    <form>
+        
+        <input id="email" placeholder="email" type="text">
+        <input placeholder="password"id="password" type="password">
+        <p><span><input type="checkbox"></span>Remember Me.</p>
+        
+     <input type="submit" values="Submit">
+        
+        
+        
+   
+   
+   
+   
+   
+   
+   
+    </form>
+ </div>
+ <p style="color:grey;text-align:center">or more information, please consult the Privacy Policy.</p>
+</body>
+</html>
+<script>
+    var form=document.querySelector("form");
+    var userData=JSON.parse(localStorage.getItem
+     ("userData"));
+
+
+    form.addEventListener("submit",function(event){
+     event.preventDefault();
+     var data={
+         email:form.email.value,
+         password:form.password.value
+
+
+
+
+
+     }
+
+     if(userData==null){
+
+        alert("Please create a new user account");
+
+}
+else if(userData.email==data.email && userData.password==data.password){
+
+      alert("Sign in Succesfull")
+      localStorage.setItem("signin",JSON.stringify
+      (userData));
+      window.location.href= "homepage.html"
+
+
+
+}
+else{
+    alert("User Does not exist")
+}
+
+
+
+
+
+
+    })
+
+
+
+
+
+
+
+
+</script>

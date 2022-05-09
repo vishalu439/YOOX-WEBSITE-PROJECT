@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Page</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px
+
+
+
+
+        }
+        form{
+               width:50%;
+               margin:auto;
+
+
+
+        }
+        input{
+            display:block;
+            margin:auto;
+            font: size 20px;
+        }
+        
+        .signup-form{
+        height: 300px;
+        width: 20%;
+       
+        margin: auto;
+        text-align: center;
+        margin-top: 40px;
+        border-radius: 20px 15px 20px 15px;
+        background-color: rgb(204, 169, 169)
+        justify-content: space-evenly;
+
+        }
+    #username{
+    margin-top: 20px;
+    background-color: burlywood;
+    height: 34px;
+
+    }
+
+    #email{
+    margin-top: 20px;
+    background-color: burlywood;
+    height: 34px;
+    }
+
+    #password{
+    margin-top: 20px;
+    background-color: burlywood;
+    height: 34px;
+    }
+
+    h2{
+    font-size: 50px;
+    text-align: center;
+    background-color: grey;
+    }
+
+    p{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+    }
+
+    .abc{
+    margin-top: 25px;
+    color: black;
+    border-radius: 5px 2px 5px 2px;
+    height: 34px;
+    background-color: brown;
+    }
+h6{
+font-size: 10px;
+margin-bottom: 25px;
+color: grey;
+}
+
+h5{
+margin-top: 160px;
+}
+
+
+    </style>
+</head>
+<body>
+<h2>  MYOOX  REGISTRATION
+</h2>
+<p>Take advantage of a faster checkout and enjoy promotions for registered customers only</p>
+    <div class="signup-form" >
+        <h1> Sign up </h1>
+ <form>
+     <input id="username" placeholder="username" type="text">
+     <input id="email" placeholder="email" type="text">
+     <input placeholder="password"id="password" type="password">
+     <p><span><input type="checkbox"> </span>I agree to the Terms of services.</p>
+     
+    <button class="abc"> <input type="submit" values="Submit"></button>
+     
+     
+     
+
+
+
+
+
+
+
+ </form>
+    </div> 
+<h5 style="text-align:center;">POWERED BY YOOX NET-A-PORTER GROUP - COPYRIGHT © 2000-2022 YOOX NET-A-PORTER GROUP S.P.A. - ALL RIGHTS RESERVED - SIAE LICENCE # 401/I/526</h5>
+<h6 style="text-align:center ;">LEGAL AREA / PRIVACY POLICY</h6>
+</body>
+</html>
+<script>
+var form=document.querySelector("form");
+form.addEventListener("submit",function(event){
+event.preventDefault();
+
+
+var data={
+    username:form.username.value,
+    email:form.username.value,
+    password:form.password.value,
+
+
+
+
+
+
+}
+alert("Sign Up Succesfull")
+window.location.href= "signin.html"
+
+
+
+localStorage.setItem("userData",JSON.stringify
+(data));
+
+console.log(data)
+
+
+
+
+})
+
+
+
+
+
+
+
+</script>
